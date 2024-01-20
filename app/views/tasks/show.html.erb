@@ -1,0 +1,23 @@
+<div class="m-5">
+  <div class="container d-flex justify-content-between">
+    <h2><%= @task.title %></h2>
+    <button type="button" class="edit btn btn-light border"> <%= link_to "Edit this task", edit_path, class: "button" %></button>
+  </div>
+  <div class="container mt-5">
+    <div class="mx-5 p-3 card bg-light mb-5" style="max-width: 30rem;">
+      <p><%= @task.details %></p>
+    </div>
+    <div class="px-5 d-flex form-check justify-content-start">
+      <% if @task.completed %>
+        <label class="form-check-label" for="flexCheckDefault"><%= "This task is completed" %></label>
+      <% else %>
+        <label class="form-check-label" for="flexCheckDefault"><%= "This task is not completed yet" %></label>
+      <% end %>
+    </div>
+    <div class="px-5 pt-3 d-flex justify-content-start">
+      <div class="py-4">
+        <%= link_to "Back to list", tasks_path, class: "back-link" %>
+      </div>
+  </div>
+  </div>
+</div>

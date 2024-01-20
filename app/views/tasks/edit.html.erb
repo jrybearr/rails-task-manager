@@ -1,0 +1,25 @@
+<%= form_with model: @task do |f| %>
+  <div class="d-flex flex-column align-items-start">
+    <div class="class">
+      <div class="input-group input-group-lg p-3">
+        <div class="input-group-prepend p-3">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      </div>
+    </div>
+    <div class="input-group input-group-lg p-3">
+      <div class="input-group-prepend">
+        <%= f.label :details %>
+        <%= f.text_field :details %>
+      </div>
+    </div>
+    <div class="d-flex form-check pt-3 px-4">
+      <%= f.check_box :completed %>
+      <label class="form-check-label" for="checkbox">Completed</label>
+    </div>
+    <div class="pt-3 px-4">
+      <%= f.submit "Update Task"%>
+    </div>
+  </div>
+<% end %>

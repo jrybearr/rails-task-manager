@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.back-link, .button, .link-underline, .add-underline {
+  text-decoration: none;
+}
+
+.form-check {
+  list-style-type: none;
+}

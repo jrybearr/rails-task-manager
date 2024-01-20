@@ -1,0 +1,21 @@
+<div class="w-100 p-3">
+  <%= form_with model: @task do |f| %>
+    <div class="d-flex flex-column align-items-start">
+      <div class="input-group input-group-lg p-3">
+        <div class="input-group-prepend p-3">
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </div>
+      </div>
+      <div class="input-group input-group-lg p-3">
+        <div class="input-group-prepend">
+          <%= f.label :details %>
+          <%= f.text_field :details %>
+        </div>
+      </div>
+      <div class="pt-3 px-4">
+        <%= f.submit "Create Task"%>
+      </div>
+    </div>
+  <% end %>
+</div>
